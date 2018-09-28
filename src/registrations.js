@@ -15,13 +15,7 @@ const Registartions =  ({students,modules,registrations}) => {
     )
 }
 
-const mapStateToProps = state => {
-    return {
-        students: state.students
-    }
-}
+const mapStateToProps = state => state
 // connect function https://www.sohamkamani.com/blog/2017/03/31/react-redux-connect-explained/
-const mapReduxStudentsStateToStudentsProps = connect(mapStateToProps)
-const RegistartionsConnectedToStore = mapReduxStudentsStateToStudentsProps(Registartions)
 
-export default RegistartionsConnectedToStore
+export default connect(mapStateToProps)(Registartions)

@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux'
 import students from './studentsReducer'
+import modules from './modulesReducers'
+import registrations from './registrationsReducers'
 
 export default combineReducers({
-    students
+    students,
+    registrations,
+    modules
 })
 
 // Example code from https://redux.js.org/api/combinereducers

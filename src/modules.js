@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react'
+import {connect} from 'react-redux'
 
-export default ({modules}) => {
+const Modules =  ({modules}) => {
     return (
     <Fragment>
         <h3>Modules</h3>
@@ -12,3 +13,11 @@ export default ({modules}) => {
     </Fragment>
     )
 }
+
+const mapStateToProps = state => {
+    return {
+        modules: state.modules
+    }
+}
+
+export default connect(mapStateToProps)(Modules)

@@ -20,7 +20,4 @@ const mapStateToProps = state => {
     }
 }
 // connect function https://www.sohamkamani.com/blog/2017/03/31/react-redux-connect-explained/
-const mapReduxStudentsStateToStudentsProps = connect(mapStateToProps)
-const StudentsConnectedToStore = mapReduxStudentsStateToStudentsProps(Students)
-
-export default StudentsConnectedToStore
+export default connect(mapStateToProps)(Students)

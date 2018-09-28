@@ -1,0 +1,1 @@
+export const LOAD_DATA_API = "LOAD_DATA_API"
