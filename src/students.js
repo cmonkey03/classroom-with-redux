@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react'
+import { connect } from 'react-redux'
 
-export default ({students}) => {
+const Students =  ({students}) => {
     return (
     <Fragment>
         <h3>Students directory</h3>
@@ -12,3 +13,14 @@ export default ({students}) => {
     </Fragment>
     )
 }
+
+const mapStateToProps = state => {
+    return {
+        students: state.students
+    }
+}
+
+const mapReduxStudentsStateToStudentsProps = connect(mapStateToProps)
+const StudentsConnectedToStore = mapReduxStudentsStateToStudentsProps(Students)
+
+export default StudentsConnectedToStore
