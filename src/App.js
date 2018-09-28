@@ -51,6 +51,7 @@ class App extends Component {
         <Fragment>
           <Students />
           <Modules modules={this.state.modules} />
+          <Registrations {...this.state} />
         </Fragment>
       </Provider>
     );
